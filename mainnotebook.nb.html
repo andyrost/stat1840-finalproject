@@ -1752,8 +1752,10 @@ summary {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbkNWWCA8LSByZWFkX2NzdihcIkNWWC5jc3ZcIilcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmxpYnJhcnkoRGF0YUNvbXB1dGluZylcbmxpYnJhcnkoZHBseXIpXG5DVlggPC0gcmVhZF9jc3YoXCJDVlguY3N2XCIpXG5gYGAifQ== -->
 <pre class="r"><code>library(readr)
+library(DataComputing)
+library(dplyr)
 CVX &lt;- read_csv(&quot;CVX.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBEYXRlID0gXHUwMDFiWzM0bWNvbF9kYXRlKGZvcm1hdCA9IFwiXCIpXHUwMDFiWzM5bSxcbiAgT3BlbiA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBIaWdoID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIExvdyA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBDbG9zZSA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBgQWRqIENsb3NlYCA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBWb2x1bWUgPSBcdTAwMWJbMzJtY29sX2RvdWJsZSgpXHUwMDFiWzM5bVxuKVxuIn0= -->
@@ -1768,8 +1770,19 @@ cols(
   Volume = [32mcol_double()[39m
 )</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSEFMIDwtIHJlYWRfY3N2KFwiSEFMLmNzdlwiKVxuYGBgIn0= -->
-<pre class="r"><code>HAL &lt;- read_csv(&quot;HAL.csv&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChDVlgpXG5gYGAifQ== -->
+<pre class="r"><code>head(CVX)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NywibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUJndHlpVERtaXVCaVlHQmdabUJtWTJSZ1pnVXlHZGljQXd5TlRJMFlHRmlZZ0R4R0JoWUdUaEJkQVZRbERHU3dBMmsra0RLSEMyd09JUFVPRjlnWm9EU00zd0NsRDBCb0RnWUlRREdRTlRrbnNiZ1l5QkJBRW1SeFNTeEpCZEwvZ0JoaVNmU24vb1NvemFzZG9pdSs3b3VkNStnUTFmWFEzbXZHYW9lb1BwRjZZZFpwRGxGMkVEcnl3K0w3dVRzZDRmcGloS0Q2YWpUK3FYSHJPa1J6emx6NFZ6VExJV29DeExGUkY5MFgxanRxT2tTSnBjVXh2WnFHc0c5dHdmeWxQcUVPVWJOc0c3UE9BZTNwQ0x6My9pbURRK1NScW9mdTYwUWNvb1NON1Uva3ZIR0luTDVPVVVDYUFhRnZPNWp2RUxVWkloOTFBT3dlaHloekxzZEZpZnNkb3F3ZzVrWE9BSnNIMXhjMm5XT2VpVEd2UStpaHZmV0I3N2M3aEo3ZE9LOVlWczhoTkxhblRrT0YyeUUwUWNNeGZXV3NROGdkZzMyOGJ6VmgraHhqclUrQkRISE1DbHNMcGxORmZvTHBuQVA4WURwNWtRNllUbnZGZ2kzdzh4SnpVMkdCejQ0UytGQzJmMEZxSG96dGtabWVBV1V6KytTWHc4eHd6c2t2aHFubmRFekpVa0FXWUF2THp5bk5UWVhZeS9RZkxaNjVVaEpMRXZYU2loSmhLdUF5bkVYNTVYb3cxL0VDTVJNb01mMy8vLzhYSkZtZ0tHYlBMeWpKek04REttVUNKVTFXTkZzWWk5QUUrRXZ6UUVhbjZDWm5sT1psNjVxQ1hBS1doZ0JlS0pzTmljME9zWklaNWdOV21QOVM4OUl6ODJDK1pjMUpURXJOZ1hMNGdGNEErMEN2b0NnenJ3VG1aYUJvc1Y1SmZra2lUQjFYY240T1RBU1M1UDhCQUxFMFZsdVNBd0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Date"],"name":[1],"type":["date"],"align":["right"]},{"label":["Open"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["High"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Close"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Adj Close"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Volume"],"name":[7],"type":["dbl"],"align":["right"]}],"data":[{"1":"2014-12-05","2":"111.79","3":"112.29","4":"110.71","5":"110.87","6":"90.35990","7":"7663400"},{"1":"2014-12-08","2":"109.89","3":"109.94","4":"106.41","5":"106.80","6":"87.04282","7":"13809000"},{"1":"2014-12-09","2":"106.17","3":"108.15","4":"106.13","5":"107.01","6":"87.21397","7":"11053000"},{"1":"2014-12-10","2":"106.22","3":"106.25","4":"103.07","5":"104.86","6":"85.46170","7":"15073400"},{"1":"2014-12-11","2":"104.97","3":"107.27","4":"104.30","5":"104.91","6":"85.50246","7":"10293600"},{"1":"2014-12-12","2":"103.76","3":"104.35","4":"102.37","5":"102.38","6":"83.44048","7":"12013600"}],"options":{"columns":{"min":{},"max":[10],"total":[7]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5IQUwgPC0gcmVhZF9jc3YoXCJIQUwuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>
+HAL &lt;- read_csv(&quot;HAL.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBEYXRlID0gXHUwMDFiWzM0bWNvbF9kYXRlKGZvcm1hdCA9IFwiXCIpXHUwMDFiWzM5bSxcbiAgT3BlbiA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBIaWdoID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIExvdyA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBDbG9zZSA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBgQWRqIENsb3NlYCA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBWb2x1bWUgPSBcdTAwMWJbMzJtY29sX2RvdWJsZSgpXHUwMDFiWzM5bVxuKVxuIn0= -->
 <pre><code>Parsed with column specification:
@@ -1783,8 +1796,19 @@ cols(
   Volume = [32mcol_double()[39m
 )</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWE9NIDwtIHJlYWRfY3N2KFwiWE9NLmNzdlwiKVxuYGBgIn0= -->
-<pre class="r"><code>XOM &lt;- read_csv(&quot;XOM.csv&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChIQUwpXG5gYGAifQ== -->
+<pre class="r"><code>head(HAL)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NywibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUJndHlpVERtaXVCaVlHQmdabUJtWTJSZ1pnVXlHZGljQXd5TlRJMFlHRmlZZ0R4R0JoWUdUaEJkQVZRbERHU3dBMmsra0RLSEMyd09JUFVPRjlnWm9EU00zd0NsRDBCb0RnWUlRREdRTlRrbnNiZ1l5QkJBRW1SeFNTeEpCZEwvZ0JoaWlVdjZPcGw3c1JJT3pxOWI1WFlFdm5Gd1pwVTdzRFU5MU1IWlJ1T2ZHcmV1Z3pNN1JON3BPWmhHNkd2cWo5SDRldGpCK2VmTWhYOUZzeHljYndRK1ZsejB3c0Y1SnBRL1lmSDkzSjJPRHM2MkJZdXZjOWtpOURGZlo3ejU1YktEc3dGRTN1bDlqTUlrdC8wT1RqRDdvZkpPdXg3YWU4MVlqZENuRDFIbjdBMVZkd0FTS003OFVIRlpzRDBPVHQrNVFEYkM5VGtweHpZOG1mYk93VEZzb2R4SmljY09qdnQ5WXBjdGNYRndWSmg0b04xRng4RlIxMkxQL2ZmN0hSeTV0dHRLOUR2RDlEbldySWdDaGJaajQyVVpNRjIveXdWa24yUERjUlV3djNTMk9waGZjMER4QUpiQXowdk1UWVVGUGp0SzRFUFovZ1dwZVRDMlIyWjZCcFRON0pOZkRqUERPU2UvR0thZTB6RWxTd0ZaZ0Mwc1A2YzBOeFZpTDlOL3RIam1Ta2tzU2RSTEswcUVxWURMY0JibGwrdkJYTWNMeEV5Z3hQVC8vLzlma0dTQm9wZzl2NkFrTXo4UHFKUUpsRFJaMFd4aExFSVQ0Qy9OQXhtZG9wdWNVWnFYcldzS2NnbFlHZ0o0b1d3MkpEWTd4RXBtbUE5WVlmNUx6VXZQeklQNWxqVW5NU2sxQjhyaEEzb0I3QU85Z3FMTXZCS1lsNEdpeFhvbCtTV0pNSFZjeWZrNU1CRklrdjhIQUVKc1hSV1NBd0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Date"],"name":[1],"type":["date"],"align":["right"]},{"label":["Open"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["High"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Close"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Adj Close"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Volume"],"name":[7],"type":["dbl"],"align":["right"]}],"data":[{"1":"2014-12-05","2":"40.81","3":"41.02","4":"40.03","5":"40.37","6":"36.27629","7":"30049700"},{"1":"2014-12-08","2":"39.84","3":"39.95","4":"38.38","5":"38.59","6":"34.67679","7":"37381000"},{"1":"2014-12-09","2":"38.04","3":"39.69","4":"37.87","5":"39.50","6":"35.49452","7":"33268800"},{"1":"2014-12-10","2":"38.47","3":"39.20","4":"37.84","5":"38.12","6":"34.25445","7":"35185800"},{"1":"2014-12-11","2":"38.06","3":"39.13","4":"38.03","5":"38.23","6":"34.35329","7":"22655600"},{"1":"2014-12-12","2":"37.81","3":"38.48","4":"37.46","5":"37.93","6":"34.08372","7":"30147100"}],"options":{"columns":{"min":{},"max":[10],"total":[7]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5YT00gPC0gcmVhZF9jc3YoXCJYT00uY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>
+XOM &lt;- read_csv(&quot;XOM.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBEYXRlID0gXHUwMDFiWzM0bWNvbF9kYXRlKGZvcm1hdCA9IFwiXCIpXHUwMDFiWzM5bSxcbiAgT3BlbiA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBIaWdoID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIExvdyA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBDbG9zZSA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBgQWRqIENsb3NlYCA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBWb2x1bWUgPSBcdTAwMWJbMzJtY29sX2RvdWJsZSgpXHUwMDFiWzM5bVxuKVxuIn0= -->
 <pre><code>Parsed with column specification:
@@ -1798,11 +1822,21 @@ cols(
   Volume = [32mcol_double()[39m
 )</code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChYT00pXG5gYGAifQ== -->
+<pre class="r"><code>head(XOM)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NywibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUJndHlpVERtaXVCaVlHQmdabUJtWTJSZ1pnVXlHZGljQXd5TlRJMFlHRmlZZ0R4R0JoWUdUaEJkQVZRbERHU3dBMmsra0RLSEMyd09JUFVPRjlnWm9EU00zd0NsRDBCb0RnWUlRREdRTlRrbnNiZ1l5QkJBRW1SeFNTeEpCZEwvZ0JoaVNYak5tUVBtazBVY3dpMW5MdndybXVVUWRtNUhYTU8rNnc1aDYwVHFoVm1uT1lTWmN6a3VTdHp2RUtaYk1IK3BUeWhDMzlKRGRWTU5ReDNDUFFMdnZYL0s0QkRPZkozeDVwZkxRSDFRL1kvNkU2STJyM1lJYzRBNkRxWXZMQzJPNlJYUTNPdnJGQVdrR1J6Q05peStuN3ZUMFNHTUIrS09NRE9JZk9neU1JM1FWMUwxMEgwZFVQNE5WTjBOaUwxaFdnL3R2V1lBN2ZHQmlLUHJDdzVkS21ja3BlY1E5QlFpSDNUbDFjT3VrNThkZ2x3L0xTeGEvZDRoS1BIRnZGMVpweHdDYit6ZFp5TVFCTlBubURiUkd4VEtqbm5NM1JEYSt6RElFNDZsOW41Z2ZrbGJJWmd1ejVNN2dDWHc4eEp6VTJHQno0NFMrRkMyZjBGcUhvenRrWm1lQVdVeisrU1h3OHh3enNrdmhxbm5kRXpKVWtBV1lBdkx6eW5OVFlYWXkvUWZMWjY1VWhKTEV2WFNpaEpoS3VBeW5FWDU1WG93MS9FQ01SUElHLy8vLy84RlNSWW9pdG56QzBveTgvT0FTcGxBU1pNVnpSYkdJalFCL3RJOGtORXB1c2tacFhuWnVxWWdsNENsSVlBWHltWkRZck5EckdTRytZQVY1ci9VdlBUTVBKaHZXWE1TazFKem9CdytvQmZBUHRBcktNck1LNEY1R1NoYXJGZVNYNUlJVThlVm5KOERFNEVrK1g4QVpZQnR3WklEQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Date"],"name":[1],"type":["date"],"align":["right"]},{"label":["Open"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["High"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Close"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Adj Close"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Volume"],"name":[7],"type":["dbl"],"align":["right"]}],"data":[{"1":"2014-12-05","2":"93.95","3":"94.59","4":"93.35","5":"93.82","6":"77.33820","7":"11831900"},{"1":"2014-12-08","2":"92.90","3":"93.13","4":"91.37","5":"91.70","6":"75.59062","7":"15735900"},{"1":"2014-12-09","2":"91.23","3":"92.06","4":"90.76","5":"91.38","6":"75.32684","7":"15883800"},{"1":"2014-12-10","2":"90.72","3":"90.73","4":"88.20","5":"88.67","6":"73.09293","7":"22279400"},{"1":"2014-12-11","2":"88.86","3":"91.54","4":"88.85","5":"89.20","6":"73.52982","7":"21522200"},{"1":"2014-12-12","2":"88.71","3":"89.00","4":"86.60","5":"86.60","6":"71.38658","7":"24568300"}],"options":{"columns":{"min":{},"max":[10],"total":[7]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCmF1dGhvcnM6ICJBbmRyZXcgUm9zdCAmIFBhdmVsIFNhY2hpdmljaGlrIg0KcHVycG9zZTogIkZpbmFuY2lhbCBBbmFseXNpcyBvZiBPaWwgQ29tcGFuaWVzIg0KZGF0ZTogIjEyLzUvMjAxOSINCi0tLQ0KDQoNCg0KYGBge3J9DQpsaWJyYXJ5KHJlYWRyKQ0KQ1ZYIDwtIHJlYWRfY3N2KCJDVlguY3N2IikNCg0KDQpIQUwgPC0gcmVhZF9jc3YoIkhBTC5jc3YiKQ0KDQoNClhPTSA8LSByZWFkX2NzdigiWE9NLmNzdiIpDQoNCmBgYA0KDQoNCg0KDQoNCg0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCmF1dGhvcnM6ICJBbmRyZXcgUm9zdCAmIFBhdmVsIFNhY2hpdmljaGlrIg0KcHVycG9zZTogIkZpbmFuY2lhbCBBbmFseXNpcyBvZiBPaWwgQ29tcGFuaWVzIg0KZGF0ZTogIjEyLzUvMjAxOSINCi0tLQ0KDQoNCg0KYGBge3J9DQpsaWJyYXJ5KHJlYWRyKQ0KbGlicmFyeShEYXRhQ29tcHV0aW5nKQ0KbGlicmFyeShkcGx5cikNCkNWWCA8LSByZWFkX2NzdigiQ1ZYLmNzdiIpDQpoZWFkKENWWCkNCg0KSEFMIDwtIHJlYWRfY3N2KCJIQUwuY3N2IikNCmhlYWQoSEFMKQ0KDQpYT00gPC0gcmVhZF9jc3YoIlhPTS5jc3YiKQ0KaGVhZChYT00pDQpgYGANCg0KDQoNCg0KDQoNCg0K</div>
 
 
 

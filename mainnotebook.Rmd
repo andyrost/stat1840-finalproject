@@ -10,14 +10,16 @@ date: "12/5/2019"
 
 ```{r}
 library(readr)
+library(DataComputing)
+library(dplyr)
 CVX <- read_csv("CVX.csv")
-
+head(CVX)
 
 HAL <- read_csv("HAL.csv")
-
+head(HAL)
 
 XOM <- read_csv("XOM.csv")
-
+head(XOM)
 ```
 
 
