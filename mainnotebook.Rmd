@@ -21,10 +21,24 @@ HAL <- read_csv("HAL.csv")
 head(HAL)
 
 XOM <- read_csv("XOM.csv")
+<<<<<<< HEAD
 head(XOM)
 
 BrentOilPrices <- read_excel("C:/Users/pasha/Downloads/BrentOilPrices.csv")
 View(BrentOilPrices)
+=======
+
+head(XOM)
+
+
+SP <- read_csv("GSPC.csv")
+```
+
+```{r}
+head(CVX)
+head(HAL)
+head(SP)
+>>>>>>> 61c819cbad7f725f462c154ff420710879714a67
 ```
 
 
