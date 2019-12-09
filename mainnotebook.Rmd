@@ -8,7 +8,8 @@ date: "12/5/2019"
 
 
 
-```{r}
+```{r message=FALSE, warning=FALSE}
+library(DataComputing)
 library(readr)
 library(DataComputing)
 library(dplyr)
@@ -19,10 +20,41 @@ HAL <- read_csv("HAL.csv")
 head(HAL)
 
 XOM <- read_csv("XOM.csv")
+<<<<<<< HEAD
 head(XOM)
+=======
+
+SP <- read_csv("GSPC.csv")
+```
+
+```{r}
+head(CVX)
+head(HAL)
+head(SP)
+>>>>>>> 98318ed72065a852295ef3ffc7f7bd3441e5f950
 ```
 
 
+```{r}
+adjustS <- 2790.37/120.67
+adjustH <- 32.66/120.67
+combined <-
+CVX %>%
+inner_join(HAL, by=c("Date"="Date")) %>%
+inner_join(SP, by=c("Date"="Date")) %>%
+filter(Date>="2018-12-01") %>%
+mutate(CVX = Close.x) %>%
+mutate(SP= Close/adjustS) %>%
+mutate(HAL = Close.y/adjustH) %>%
+select(Date, CVX, SP, HAL)
+tail(combined)
+g <- ggplot(data = combined) + geom_line(aes(x = Date, y=CVX, color = "CVX")) +
+geom_line( aes(x=Date, y = combined$SP,color = "SP")) +
+geom_line(aes(x=Date, y = combined$HAL,color = "HAL")) + ylab("Closing Price") + scale_colour_manual(name='', values=c('SP'= "red",
+'HAL'='blue', "CVX"="black"))
+g
+
+```
 
 
 
