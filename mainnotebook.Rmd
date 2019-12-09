@@ -19,6 +19,10 @@ HAL <- read_csv("HAL.csv")
 XOM <- read_csv("XOM.csv")
 
 ```
+```{r}
+head(CVX)
+```
+
 
 
 
