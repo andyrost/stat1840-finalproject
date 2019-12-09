@@ -20,9 +20,9 @@ HAL <- read_csv("HAL.csv")
 head(HAL)
 
 XOM <- read_csv("XOM.csv")
-<<<<<<< HEAD
+
 head(XOM)
-=======
+
 
 SP <- read_csv("GSPC.csv")
 ```
@@ -31,7 +31,6 @@ SP <- read_csv("GSPC.csv")
 head(CVX)
 head(HAL)
 head(SP)
->>>>>>> 98318ed72065a852295ef3ffc7f7bd3441e5f950
 ```
 
 
