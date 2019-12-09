@@ -24,6 +24,8 @@ XOM <- read_csv("XOM.csv")
 head(XOM)
 
 SP <- read_csv("GSPC.csv")
+
+BrentOilPrices <- read_csv("BrentOilPrices.csv")
 ```
 
 ```{r}
