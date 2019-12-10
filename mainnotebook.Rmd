@@ -68,29 +68,29 @@ g
 ```
 
 ```{r}
-adjustO <- 60.17/32.66
-combined2 <-
+adjustO <- 60.17/120.67
+combined3 <-
 CVX %>%
 inner_join(BrentOilPrices, by=c("Date"="Date")) %>%
 filter(Date>="2018-12-01") %>%
 mutate(CVX = Close) %>%
 mutate(Oil= Price/adjustO) %>%
 select(Date, CVX, Oil)
-g <- ggplot(data = combined2) + geom_line(aes(x = Date, y = CVX, color = "CVX")) +
+g <- ggplot(data = combined3) + geom_line(aes(x = Date, y = CVX, color = "CVX")) +
 geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_manual(name='', values=c('Oil'= "red", "CVX"="black"))
 g
 ```
 
 ```{r}
-adjustO <- 60.17/32.66
-combined2 <-
+adjustO <- 60.17/81.22
+combined4 <-
 XOM %>%
 inner_join(BrentOilPrices, by=c("Date"="Date")) %>%
 filter(Date>="2018-12-01") %>%
 mutate(XOM = Close) %>%
 mutate(Oil= Price/adjustO) %>%
 select(Date, XOM, Oil)
-g <- ggplot(data = combined2) + geom_line(aes(x = Date, y = XOM, color = "XOM")) +
+g <- ggplot(data = combined4) + geom_line(aes(x = Date, y = XOM, color = "XOM")) +
 geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_manual(name='', values=c('Oil'= "red", "XOM"="black"))
 g
 ```
