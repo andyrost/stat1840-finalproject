@@ -14,6 +14,10 @@ library(DataComputing)
 library(dplyr)
 library(tidyverse)
 library(lubridate)
+<<<<<<< HEAD
+=======
+library(readr)
+>>>>>>> d55e9a15404c44ad1aa2f3b9b48d14e00c079540
 
 CVX <- read_csv("CVX.csv")
 head(CVX)
@@ -70,6 +74,17 @@ geom_line(aes(x=Date, y = combined$HAL,color = "HAL")) + ylab("Closing Price") +
 g
 ```
 
+```{r}
+
+DateConverstion <-
+  BrentOilPrices %>%
+  select(Date) %>%
+  Date = c("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" )
+Month <- Month %>%
+  as_date(Month)
+
+
+```
 
 
 
