@@ -15,6 +15,8 @@ library(dplyr)
 library(tidyverse)
 library(lubridate)
 library(readr)
+library(ggplot2)
+
 
 
 CVX <- read_csv("CVX.csv")
@@ -95,6 +97,8 @@ g <- ggplot(data = combined4) + geom_line(aes(x = Date, y = XOM, color = "XOM"))
 geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_manual(name='', values=c('Oil'= "red", "XOM"="black"))
 g
 ```
-
+```{r}
+scatterGraphHelper()
+```
 
 
