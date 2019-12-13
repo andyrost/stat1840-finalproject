@@ -19,6 +19,7 @@ library(ggplot2)
 
 
 
+
 CVX <- read_csv("CVX.csv")
 head(CVX)
 
@@ -97,7 +98,9 @@ geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_ma
 g
 ```
 ```{r}
-scatterGraphHelper()
+CombinedData <-
+  
+barGraphHelper(XOM)
 ```
 
 
