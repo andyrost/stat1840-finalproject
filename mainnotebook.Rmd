@@ -65,6 +65,7 @@ filter(Date>="2018-12-01") %>%
 mutate(HAL = Close) %>%
 mutate(Oil= Price/adjustO) %>%
 select(Date, HAL, Oil)
+
 g <- ggplot(data = combined2) + geom_line(aes(x = Date, y = HAL, color = "HAL")) +
 geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_manual(name='', values=c('Oil'= "red", "HAL"="black"))
 g
