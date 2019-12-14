@@ -18,7 +18,7 @@ Research Questions:
 
 
 
-
+Here, we establish which packages we are importing:
 ```{r message=FALSE, warning=FALSE}
 library(readr)
 library(DataComputing)
@@ -29,7 +29,7 @@ library(readr)
 library(ggplot2)
 ```
 
-
+This block is used to import the various tables that are used in our report:
 ```{r}
 CVX <- read_csv("CVX.csv")
 head(CVX)
@@ -50,7 +50,7 @@ BrentOilPrices <-
   mutate(Date = mdy(Date))
 ```
 
-
+This graph describes how a few oil/gas companies (CVX - Chevron, HAL - Haliburton) are performing when compared to the S&P 500 (SP):
 ```{r}
 adjustS <- 2790.37/120.67
 adjustH <- 32.66/120.67
@@ -70,6 +70,8 @@ geom_line(aes(x=Date, y = combined$HAL,color = "HAL")) + ylab("Closing Price") +
 'HAL'='blue', "CVX"="black"))
 g
 ```
+
+This graph is used to compare the performance of HAL stock against a basic oil index
 ```{r}
 adjustO <- 60.17/32.66
 combined2 <-
@@ -85,6 +87,7 @@ geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_ma
 g
 ```
 
+This graph is used to compare the performance of CVX stock against a basic oil index
 ```{r}
 adjustO <- 60.17/120.67
 combined3 <-
@@ -99,6 +102,7 @@ geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_ma
 g
 ```
 
+This graph is used to compare the performance of XOM stock against a basic oil index
 ```{r}
 adjustO <- 60.17/81.22
 combined4 <-
@@ -111,11 +115,6 @@ select(Date, XOM, Oil)
 g <- ggplot(data = combined4) + geom_line(aes(x = Date, y = XOM, color = "XOM")) +
 geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_manual(name='', values=c('Oil'= "red", "XOM"="black"))
 g
-```
-```{r}
-CombinedData <-
-  
-barGraphHelper(XOM)
 ```
 
 
