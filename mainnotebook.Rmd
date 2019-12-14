@@ -44,6 +44,10 @@ SP <- read_csv("GSPC.csv")
 
 BrentOilPrices <- read_csv("BrentOilPrices.csv")
 
+database <- read_csv("database.csv")
+
+use_ng_capita <- read_csv("use_ng_capita.csv")
+
 
 BrentOilPrices <-
   BrentOilPrices %>%
