@@ -5,7 +5,11 @@ authors: "Andrew Rost & Pavel Sachivichik"
 purpose: "Financial Analysis of Oil Companies"
 date: "12/5/2019"
 ---
+Topic:
+Our topic for this final project is the financial analysis of the oil industries stocks. We decided to do this topic because we think that it is a a good challenge and we will be able to implement the techniques we learned in this class. Both of us follow the stock market and we thought that doing an analysis of the oil industry would be very interesting. The stocks prices within the oil industry is very hecktic and uncertain. We wanted to see if we could find out what kind factors influence the rise and fall of the market. There are many aspects within the oil industry that influence the stock price and we would like to look at many of them. 
 
+Research Questions:
+Si
 
 
 ```{r message=FALSE, warning=FALSE}
@@ -16,10 +20,10 @@ library(tidyverse)
 library(lubridate)
 library(readr)
 library(ggplot2)
+```
 
 
-
-
+```{r}
 CVX <- read_csv("CVX.csv")
 head(CVX)
 
@@ -32,10 +36,13 @@ head(XOM)
 SP <- read_csv("GSPC.csv")
 
 BrentOilPrices <- read_csv("BrentOilPrices.csv")
+
+
 BrentOilPrices <-
   BrentOilPrices %>%
   mutate(Date = mdy(Date))
 ```
+
 
 ```{r}
 adjustS <- 2790.37/120.67
