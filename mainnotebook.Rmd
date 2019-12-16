@@ -63,6 +63,8 @@ beatingSP <- function(stock, index) {
   }
 }
 ```
+
+Use of function to check if a given stock is beating the S&P 500
 ```{r}
 beatingSP(CVX, SP)
 ```
@@ -88,9 +90,6 @@ geom_line( aes(x=Date, y = combined$SP,color = "SP")) +
 geom_line(aes(x=Date, y = combined$HAL,color = "HAL")) + ylab("Closing Price") + scale_colour_manual(name='', values=c('SP'= "red",
 'HAL'='blue', "CVX"="black"))
 g
-```
-```{r}
-
 ```
 
 
