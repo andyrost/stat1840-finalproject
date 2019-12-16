@@ -140,7 +140,17 @@ geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_ma
 g
 ```
 
+
+This graph displays a bar chart representation of the the stock prices through a 6 year time span for Halliburton.
 ```{r}
 ggplot(data = HAL, aes(x = Date, y = Close, fill = "Price")) + geom_bar(stat = "identity")
 
+```
+This graph displays a bar chart representation of the the stock prices through a 6 year time span for Exxonmobil.
+```{r}
+ggplot(data = XOM, aes(x = Date, y = Close, fill = "Price")) + geom_bar(stat = "identity")
+```
+This graph displays a bar chart representation of the the stock prices through a 6 year time span for Chevron.
+```{r}
+ggplot(data = CVX, aes(x = Date, y = Close, fill = "Price")) + geom_bar(stat = "identity")
 ```
