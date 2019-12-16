@@ -140,4 +140,7 @@ geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_ma
 g
 ```
 
+```{r}
+ggplot(data = HAL, aes(x = Date, y = Close, fill = "Price")) + geom_bar(stat = "identity")
 
+```
