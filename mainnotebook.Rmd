@@ -52,7 +52,22 @@ use_ng_capita <- read_csv("use_ng_capita.csv")
 BrentOilPrices <-
   BrentOilPrices %>%
   mutate(Date = mdy(Date))
+
+beatingSP <- function(stock, index) {
+  adjustS <- 2790.37/120.67
+  if(tail(stock$Close,1)*adjustS>tail(index$Close,1)) {
+    print("This stock is outperforming the index")
+  }
+  else{
+    print("The stock is not beating the index")
+  }
+}
 ```
+```{r}
+beatingSP(CVX, SP)
+```
+
+
 
 This graph describes how a few oil/gas companies (CVX - Chevron, HAL - Haliburton) are performing when compared to the S&P 500 (SP):
 ```{r}
@@ -74,6 +89,10 @@ geom_line(aes(x=Date, y = combined$HAL,color = "HAL")) + ylab("Closing Price") +
 'HAL'='blue', "CVX"="black"))
 g
 ```
+```{r}
+
+```
+
 
 This graph is used to compare the performance of HAL stock against a basic oil index
 ```{r}
