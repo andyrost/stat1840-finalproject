@@ -30,12 +30,17 @@ library(tidyverse)
 library(lubridate)
 library(readr)
 library(ggplot2)
+library(zoo)
 ```
 
 This block is used to import the various tables that are used in our report:
 ```{r}
 CVX <- read_csv("CVX.csv")
 head(CVX)
+CVX <-
+  CVX %>%
+  mutate(weekma = rollmean(Close, k = 21, fill = NA)) %>%
+  mutate(tweekma = rollmean(Close, k = 100, fill = NA))
 
 HAL <- read_csv("HAL.csv")
 head(HAL)
@@ -65,6 +70,12 @@ beatingSP <- function(stock, index) {
     print("The stock is not beating the index")
   }
 }
+```
+Lets take a look at Chevron, to get an idea of where the stock is at over the past 5 years, overlayed with a 3 week and 100 day rolling centered average.
+```{r}
+na.omit(CVX)
+ggplot(data = na.omit(CVX)) + geom_line(aes(x = Date, y = Close, color = "CVX Close")) +
+  geom_line(aes(x=Date, y = weekma,color = "ThreeWeekAvg")) + geom_line(aes(x=Date, y = tweekma,color = "100DayAvg"))
 ```
 
 Use of function to check if a given stock is beating the S&P 500
