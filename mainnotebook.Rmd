@@ -34,7 +34,7 @@ library(zoo)
 ```
 
 This block is used to import the various tables that are used in our report:
-```{r}
+```{r message=FALSE, warning=FALSE}
 CVX <- read_csv("CVX.csv")
 head(CVX)
 CVX <-
@@ -52,9 +52,9 @@ SP <- read_csv("GSPC.csv")
 
 BrentOilPrices <- read_csv("BrentOilPrices.csv")
 
-database <- read_csv("database.csv")
+#database <- read_csv("database.csv")
 
-use_ng_capita <- read_csv("use_ng_capita.csv")
+#use_ng_capita <- read_csv("use_ng_capita.csv")
 
 
 BrentOilPrices <-
@@ -74,8 +74,8 @@ beatingSP <- function(stock, index) {
 Lets take a look at Chevron, to get an idea of where the stock is at over the past 5 years, overlayed with a 3 week and 100 day rolling centered average.
 ```{r}
 na.omit(CVX)
-ggplot(data = na.omit(CVX)) + geom_line(aes(x = Date, y = Close, color = "CVX Close")) +
-  geom_line(aes(x=Date, y = weekma,color = "ThreeWeekAvg")) + geom_line(aes(x=Date, y = tweekma,color = "100DayAvg"))
+
+ggplot(data = na.omit(CVX)) + geom_line(aes(x = Date, y = Close, color = "CVX Close")) + geom_line(aes(x=Date, y = weekma,color = "ThreeWeekAvg")) + geom_line(aes(x=Date, y = tweekma,color = "100DayAvg"))
 ```
 
 Use of function to check if a given stock is beating the S&P 500
@@ -86,6 +86,7 @@ beatingSP(CVX, SP)
 
 
 This graph describes how a few oil/gas companies (CVX - Chevron, HAL - Haliburton) are performing when compared to the S&P 500 (SP):
+
 ```{r}
 adjustS <- 2790.37/120.67
 adjustH <- 32.66/120.67
@@ -98,7 +99,6 @@ mutate(CVX = Close.x) %>%
 mutate(SP= Close/adjustS) %>%
 mutate(HAL = Close.y/adjustH) %>%
 select(Date, CVX, SP, HAL)
-tail(combined)
 g <- ggplot(data = combined) + geom_line(aes(x = Date, y=CVX, color = "CVX")) +
 geom_line( aes(x=Date, y = combined$SP,color = "SP")) +
 geom_line(aes(x=Date, y = combined$HAL,color = "HAL")) + ylab("Closing Price") + scale_colour_manual(name='', values=c('SP'= "red",
@@ -107,7 +107,7 @@ g
 ```
 
 
-This graph is used to compare the performance of HAL stock against a basic oil index
+This graph is used to compare the performance of HAL stock against a basic oil index:
 ```{r}
 adjustO <- 60.17/32.66
 combined2 <-
@@ -123,7 +123,7 @@ geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_ma
 g
 ```
 
-This graph is used to compare the performance of CVX stock against a basic oil index
+This graph is used to compare the performance of CVX stock against a basic oil index:
 ```{r}
 adjustO <- 60.17/120.67
 combined3 <-
@@ -138,7 +138,7 @@ geom_line(aes(x=Date, y = Oil, color = "Oil")) + ylab("Price") + scale_colour_ma
 g
 ```
 
-This graph is used to compare the performance of XOM stock against a basic oil index
+This graph is used to compare the performance of XOM (ExxonMobil) stock against a basic oil index:
 ```{r}
 adjustO <- 60.17/81.22
 combined4 <-
@@ -155,11 +155,11 @@ g
 
 
 This graph displays a bar chart representation of the the stock prices through a 6 year time span for Halliburton.
+
 ```{r}
 ggplot(data = HAL, aes(x = Date, y = Close, fill = "Price")) + geom_bar(stat = "identity")
-
 ```
-This graph displays a bar chart representation of the the stock prices through a 6 year time span for Exxonmobil.
+This graph displays a bar chart representation of the the stock prices through a 6 year time span for ExxonMobil.
 ```{r}
 ggplot(data = XOM, aes(x = Date, y = Close, fill = "Price")) + geom_bar(stat = "identity")
 ```
@@ -167,3 +167,6 @@ This graph displays a bar chart representation of the the stock prices through a
 ```{r}
 ggplot(data = CVX, aes(x = Date, y = Close, fill = "Price")) + geom_bar(stat = "identity")
 ```
+
+## Conclusion
+In conclusion, we have found that, at least in the companies we examined, that Oil and Gas companies have seen slower growth compared to the main oil index, and when compared to a general market index such as the S&P 500. This could be due to many reasons, such as falling gas prices and low demand, paired with a high supply. Yet, we see even the gas index beating out these companies.
