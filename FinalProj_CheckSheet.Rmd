@@ -1,6 +1,6 @@
 ---
 title: 'Final Project: Guidance Document'
-author: "Author Name(s)"
+author: "Andrew Rost and Pavel Sachivichik"
 date: "Due December 17, 2019"
 output:  html_notebook
 ---
